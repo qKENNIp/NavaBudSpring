@@ -15,9 +15,9 @@ public class ClientDate {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String clientId;
     private String name;
+    private String surname;
     private String email;
     private String phone;
-    private String message;
 
     public ClientDate() {}
 }
