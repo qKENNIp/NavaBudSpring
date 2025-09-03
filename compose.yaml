@@ -1,9 +1,10 @@
 services:
   postgres:
     image: 'postgres:latest'
+    container_name: 'NavaBudDB'
     environment:
       - 'POSTGRES_DB=clients'
       - 'POSTGRES_PASSWORD=admin'
       - 'POSTGRES_USER=admin'
     ports:
-      - '5432'
+      - "5432:5432"
