@@ -3,19 +3,16 @@ package org.nava.navabudspring.ServisLayer;
 import org.nava.navabudspring.Entity.ClientDate;
 import org.nava.navabudspring.Repositori.ClientRepositoriImp;
 import org.nava.navabudspring.RepositoriJpa.ClientRepositoriJPA;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class ServiceLayer {
 
-    @Autowired
-    private ClientRepositoriJPA clientRepositoriJPA;
-    private ClientRepositoriImp clientRepositoriImp;
+    private final ClientRepositoriJPA clientRepositoriJPA;
+    private final ClientRepositoriImp clientRepositoriImp;
 
     public ServiceLayer(ClientRepositoriJPA clientRepositoriJPA,
                         ClientRepositoriImp clientRepositoriImp) {
@@ -27,6 +24,12 @@ public class ServiceLayer {
     }
     public List<ClientDate> findAll() {
         return clientRepositoriJPA.findAll();
+    }
+    public List<ClientDate> findByAnswerFalse() {return clientRepositoriJPA.findByAnswerFalse();}
+    @Transactional
+    public void setAnswerTrue(ClientDate client) {
+        client.setAnswer(true);
+        clientRepositoriJPA.save(client);
     }
     @Transactional
     public void addClient(ClientDate client) {

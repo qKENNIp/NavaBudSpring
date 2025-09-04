@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl" xmlns:th = "http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -244,26 +244,27 @@
                     </p>
                 </div>
             </div>
+        </div>
     </section>
     <section class="form" id="myform">
         <div class="container">
             <div class="row d-flex justify-content-center">
                 <div class="col-xl-5 col-lg-6 col-md-8">
-                    <form class="form__box needs-validation" id="formSubmit" novalidate>
+                    <form th:action="@{/send}" th:object="${clientDate}" class="form__box needs-validation" id="formSubmit" method="POST"  novalidate>
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Imię Nazwisko</label>                    
                              <div class="input-group">
-                                <input id="name" type="text" aria-label="First name" class="form-control" required>
-                                <input id="surname" aria-label="Last name" type="text" class="form-control" required>
+                                <input th:field="*{name}" id="name" type="text" aria-label="First name" class="form-control" required>
+                                <input th:field="*{surname}" id="surname" aria-label="Last name" type="text" class="form-control" required>
                              </div>                            
                         </div>                        
                         <div class="mb-3">
                           <label for="exampleInputEmail1" class="form-label"  >Email address</label>
-                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                          <input th:field="*{email}" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Numer Kontaktowy</label>
-                            <input type="tel" class="form-control" id="exampleInputTel" required>
+                            <input th:field="*{phone}" type="tel" class="form-control" id="exampleInputTel" required>
                           </div>
                         <div class="mb-3 form-check">
                           <label class="form-check-label" for="exampleCheck1">
@@ -364,7 +365,6 @@
                                 <a href="https://storyset.com/work">Work illustrations by Storyset</a>
                             </p>
                         </li>
-
                     </ul>                    
                 </div>
             </div>

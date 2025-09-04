@@ -15,17 +15,29 @@ public class ClientDate {
     @Column(name ="id")
     private Long clientId;
 
-    @Column(nullable = false)
+    @Column(nullable = false, length = 20)
     private String name;
 
-    @Column(nullable = false)
+    @Column(nullable = false, length = 20)
     private String surname;
 
-    @Column(unique = true, nullable = false)
+    @Column(unique = true, nullable = false, length = 50)
     private String email;
 
-    @Column(nullable = false)
+    @Column(nullable = false, length = 12)
     private String phone;
 
+    @Column(nullable = false)
+    private Boolean answer = false;
+
     public ClientDate() {}
+
+    @Override
+    public String toString() {
+        return
+                "name: " + name + " " + surname + "\n" +
+                "email: " + email + "\n" +
+                "phone: " + phone + "\n"
+                ;
+    }
 }
