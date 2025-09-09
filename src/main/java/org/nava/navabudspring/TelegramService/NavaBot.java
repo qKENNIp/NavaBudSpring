@@ -12,13 +12,10 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMa
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
-import java.util.HashMap;
 import java.util.List;
 
 @Component
 public class NavaBot extends TelegramLongPollingBot {
-
-    private HashMap<String, ClientDate> buttons = new HashMap<>();
 
     private final ServiceLayer serviceLayer;
 
@@ -30,6 +27,7 @@ public class NavaBot extends TelegramLongPollingBot {
 
     public NavaBot(ServiceLayer serviceLayer) {
         this.serviceLayer = serviceLayer;
+
     }
 
     @Override
@@ -57,7 +55,6 @@ public class NavaBot extends TelegramLongPollingBot {
                     ShowClientsWithoutAnswer(update);
                     break;
             }
-
         }
     }
 
@@ -84,14 +81,12 @@ public class NavaBot extends TelegramLongPollingBot {
 
             InlineKeyboardButton button = new InlineKeyboardButton();
             button.setText("Ответил");
-            button.setCallbackData("ANSWER"+client.getClientId());
+            button.setCallbackData(client.getClientId().toString());
 
             InlineKeyboardMarkup markup = new InlineKeyboardMarkup();
             markup.setKeyboard(List.of(List.of(button)));
 
             sendMessage.setReplyMarkup(markup);
-
-            buttons.put("ANSWER"+client.getClientId(), client);
 
             try {
                 execute(sendMessage);
@@ -102,15 +97,10 @@ public class NavaBot extends TelegramLongPollingBot {
     private void Answer(Update update) {
 
         CallbackQuery callbackQuery = update.getCallbackQuery();
-        String callbackData = callbackQuery.getData();
+        Long callbackData = Long.parseLong(callbackQuery.getData()) ;
         SendMessage response = new SendMessage();
 
-        for (String key : buttons.keySet()) {
-            if (key.equals(callbackData)) {
-                serviceLayer.setAnswerTrue(buttons.get(key));
-                buttons.remove(key);
-            }
-        }
+        serviceLayer.setAnswerTrue(callbackData);
 
         response.setChatId(update.getMessage().getChatId());
         response.setText("Клиент отмечен как отвеченный");
@@ -121,4 +111,5 @@ public class NavaBot extends TelegramLongPollingBot {
             e.printStackTrace();
         }
     }
+
 }

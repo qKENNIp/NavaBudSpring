@@ -27,9 +27,11 @@ public class ServiceLayer {
     }
     public List<ClientDate> findByAnswerFalse() {return clientRepositoriJPA.findByAnswerFalse();}
     @Transactional
-    public void setAnswerTrue(ClientDate client) {
-        client.setAnswer(true);
-        clientRepositoriJPA.save(client);
+    public void setAnswerTrue(Long id) {
+        clientRepositoriJPA.findById(id)
+                .ifPresent(clientDate -> {clientDate.setAnswer(true);
+                    clientRepositoriJPA.save(clientDate);}
+                );
     }
     @Transactional
     public void addClient(ClientDate client) {

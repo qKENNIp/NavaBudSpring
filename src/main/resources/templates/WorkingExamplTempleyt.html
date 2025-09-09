@@ -33,7 +33,7 @@
                 <a class="nav-link header__btn" th:href="@{/}">Jak działamy</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link header__btn" th:href="@{/working-example}">Przyklady prac</a>
+                <a class="nav-link header__btn" th:href="@{/work-example}">Przyklady prac</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link header__btn" th:href="@{/}">Skontaktować się z nami</a>
@@ -52,84 +52,692 @@
 </header>
 <section class="carousel">
   <div class="container">
-    <div class="row text-center">
-      <h3 class="carousel__titel">
-        Przykłady prac
-      </h3>
-    </div>
-    <div class="row Work__Exampl">
-      <div class="card col-lg-3 col-md-6 col-sm-12">
-        <img th:src="@{/img/bath.JPG}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Łażienka</h5>
-          <p class="card-text">Zrealozowalivaliśmy projek w ktorym zrobiliśmy ...</p>
-          <button type="button" class="Work__Exampl_btn button  btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Wiecej informacji
-          </button>
-        </div>
+
+          <div class="row text-center">
+              <h3 class="carousel__titel">
+                  Przykłady prac
+              </h3>
+          </div>
+      <div class="row">
+          <div class="container d-block col-lg-4 col-md-12">
+              <div class="card">
+                  <img th:src="@{/img/0/00.JPG}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                      <h5 class="card-title">Łażienka</h5>
+                      <p class="card-text">Zrealozowalivaliśmy projek w ktorym zrobiliśmy ...</p>
+                      <button type="button" class="Work__Exampl_btn button  btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                          Wiecej informacji
+                      </button>
+                  </div>
+              </div>
+              <!-------------- Modal ------------->
+              <div class="modal fade" id="exampleModal0" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-xl">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <h1 class="modal-title fs-5" id="exampleModalLabel">Łażienka</h1>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                              <div class="row">
+                                  <!--                                IMG OF WORK---------->
+                                  <div class="col-4 zoomable-image" data-target="zoomable-image-on-scean-00">
+                                      <img th:src="@{img/0/00.jpg}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image-on-scean" id="zoomable-image-on-scean-00">
+                                      <img th:src="@{img/0/00.jpg}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image" data-target="zoomable-image-on-scean-01">
+                                      <img th:src="@{img/0/01.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image-on-scean" id="zoomable-image-on-scean-01">
+                                      <img th:src="@{img/0/01.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image" data-target="zoomable-image-on-scean-02">
+                                      <img th:src="@{img/0/02.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image-on-scean" id="zoomable-image-on-scean-02">
+                                      <img th:src="@{img/0/02.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image" data-target="zoomable-image-on-scean-03">
+                                      <img th:src="@{img/0/02.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image-on-scean" id="zoomable-image-on-scean-03">
+                                      <img th:src="@{img/0/02.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <!--                                DESCRIPTION -------->
+                                  <div class="row">
+                                      <div class="col-12 modal-body-text">
+                                          <p>
+                                              Przygotowanie ściany pod mikrobeton (szlifowanie i gruntowanie ścian).<br>
+
+                                              Wykucie bruzd pod listwy LED, montaż listew LED.<br>
+
+                                              Przygotowanie schodów (oczyszczenie z resztek betonu, gruntowanie stopni).<br>
+
+                                              Układanie płytek na stopniach.<br>
+
+                                              Fugowanie schodów, aplikacja silikonu.<br>
+
+                                              Montaż listew przypodłogowych.<br>
+
+                                              Nakładanie farby gruntującej na ścianę.<br>
+
+                                              Aplikacja mikrobetonu.
+                                          </p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="modal-footer">
+                              <button type="button" class="button btn btn-secondary" data-bs-dismiss="modal">Zamknąć</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="container d-block col-lg-4 col-md-12">
+              <div class="Work__Exampl">
+                  <div class="card">
+                      <img th:src="@{/img/1/10.JPG}" class="card-img-top" alt="...">
+                      <div class="card-body">
+                          <h5 class="card-title">Łażienka</h5>
+                          <p class="card-text">Zrealozowalivaliśmy projek w ktorym zrobiliśmy ...</p>
+                          <button type="button" class="Work__Exampl_btn button  btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                              Wiecej informacji
+                          </button>
+                      </div>
+                  </div>
+              </div>
+              <!-------------- Modal ------------->
+              <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-xl">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <h1 class="modal-title fs-5" id="exampleModalLabel0">Łażienka</h1>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                              <div class="row">
+                                  <!--                                IMG OF WORK---------->
+                                  <div class="col-3 zoomable-image" data-target="zoomable-image-on-scean-10">
+                                      <img th:src="@{img/1/10.jpg}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image-on-scean" id="zoomable-image-on-scean-10">
+                                      <img th:src="@{img/1/10.jpg}" class="img-fluid" alt="...">
+                                  </div>
+
+                                  <div class="col-3 zoomable-image" data-target="zoomable-image-on-scean-11">
+                                      <img th:src="@{img/1/11.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image-on-scean" id="zoomable-image-on-scean-11">
+                                      <img th:src="@{img/1/11.JPG}" class="img-fluid" alt="...">
+                                  </div>
+
+                                  <div class="col-3 zoomable-image" data-target="zoomable-image-on-scean-12">
+                                      <img th:src="@{img/1/12.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image-on-scean" id="zoomable-image-on-scean-12">
+                                      <img th:src="@{img/1/12.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image" data-target="zoomable-image-on-scean-13">
+                                      <img th:src="@{img/1/13.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image-on-scean" id="zoomable-image-on-scean-13">
+                                      <img th:src="@{img/1/13.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image" data-target="zoomable-image-on-scean-14">
+                                      <img th:src="@{img/1/14.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image-on-scean" id="zoomable-image-on-scean-14">
+                                      <img th:src="@{img/1/14.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <!--                                DESCRIPTION -------->
+                                  <div class="row">
+                                      <div class="col-12 modal-body-text">
+                                          <p>
+                                              Przygotowanie ściany pod mikrobeton (szlifowanie i gruntowanie ścian).<br>
+
+                                              Wykucie bruzd pod listwy LED, montaż listew LED.<br>
+
+                                              Przygotowanie schodów (oczyszczenie z resztek betonu, gruntowanie stopni).<br>
+
+                                              Układanie płytek na stopniach.<br>
+
+                                              Fugowanie schodów, aplikacja silikonu.<br>
+
+                                              Montaż listew przypodłogowych.<br>
+
+                                              Nakładanie farby gruntującej na ścianę.<br>
+
+                                              Aplikacja mikrobetonu.
+                                          </p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="modal-footer">
+                              <button type="button" class="button btn btn-secondary" data-bs-dismiss="modal">Zamknąć</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="container d-block col-lg-4 col-md-12">
+              <div class="Work__Exampl">
+                  <div class="card">
+                      <img th:src="@{/img/2/26.JPG}" class="card-img-top" alt="...">
+                      <div class="card-body">
+                          <h5 class="card-title">Łażienka</h5>
+                          <p class="card-text">Zrealozowalivaliśmy projek w ktorym zrobiliśmy ...</p>
+                          <button type="button" class="Work__Exampl_btn button  btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                              Wiecej informacji
+                          </button>
+                      </div>
+                  </div>
+              </div>
+              <!-------------- Modal ------------->
+              <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-xl">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <h1 class="modal-title fs-5" id="exampleModalLabel2">Łażienka</h1>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                              <div class="row">
+                                  <!--                                IMG OF WORK---------->
+                                  <div class="col-3 zoomable-image" data-target="zoomable-image-on-scean-20">
+                                      <img th:src="@{img/2/20.jpg}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image-on-scean" id="zoomable-image-on-scean-20">
+                                      <img th:src="@{img/2/20.jpg}" class="img-fluid" alt="...">
+                                  </div>
+
+                                  <div class="col-3 zoomable-image" data-target="zoomable-image-on-scean-21">
+                                      <img th:src="@{img/2/21.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image-on-scean" id="zoomable-image-on-scean-21">
+                                      <img th:src="@{img/2/21.JPG}" class="img-fluid" alt="...">
+                                  </div>
+
+                                  <div class="col-3 zoomable-image" data-target="zoomable-image-on-scean-22">
+                                      <img th:src="@{img/2/22.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image-on-scean" id="zoomable-image-on-scean-22">
+                                      <img th:src="@{img/2/22.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image" data-target="zoomable-image-on-scean-23">
+                                      <img th:src="@{img/2/23.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image-on-scean" id="zoomable-image-on-scean-23">
+                                      <img th:src="@{img/2/23.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image" data-target="zoomable-image-on-scean-24">
+                                      <img th:src="@{img/2/24.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image-on-scean" id="zoomable-image-on-scean-24">
+                                      <img th:src="@{img/2/24.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image" data-target="zoomable-image-on-scean-25">
+                                      <img th:src="@{img/2/25.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image-on-scean" id="zoomable-image-on-scean-25">
+                                      <img th:src="@{img/2/25.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image" data-target="zoomable-image-on-scean-26">
+                                      <img th:src="@{img/2/26.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image-on-scean" id="zoomable-image-on-scean-26">
+                                      <img th:src="@{img/2/26.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image" data-target="zoomable-image-on-scean-27">
+                                      <img th:src="@{img/2/27.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image-on-scean" id="zoomable-image-on-scean-27">
+                                      <img th:src="@{img/2/27.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <!--                                DESCRIPTION -------->
+                                  <div class="row">
+                                      <div class="col-12 modal-body-text">
+                                          <p>
+                                              Przygotowanie ściany pod mikrobeton (szlifowanie i gruntowanie ścian).<br>
+
+                                              Wykucie bruzd pod listwy LED, montaż listew LED.<br>
+
+                                              Przygotowanie schodów (oczyszczenie z resztek betonu, gruntowanie stopni).<br>
+
+                                              Układanie płytek na stopniach.<br>
+
+                                              Fugowanie schodów, aplikacja silikonu.<br>
+
+                                              Montaż listew przypodłogowych.<br>
+
+                                              Nakładanie farby gruntującej na ścianę.<br>
+
+                                              Aplikacja mikrobetonu.
+                                          </p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="modal-footer">
+                              <button type="button" class="button btn btn-secondary" data-bs-dismiss="modal">Zamknąć</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="container d-block col-lg-4 col-md-12">
+              <div class="Work__Exampl">
+                  <div class="card">
+                      <img th:src="@{/img/3/33.JPG}" class="card-img-top" alt="...">
+                      <div class="card-body">
+                          <h5 class="card-title">Łażienka</h5>
+                          <p class="card-text">Zrealozowalivaliśmy projek w ktorym zrobiliśmy ...</p>
+                          <button type="button" class="Work__Exampl_btn button  btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                              Wiecej informacji
+                          </button>
+                      </div>
+                  </div>
+              </div>
+              <!-------------- Modal ------------->
+              <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-xl">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <h1 class="modal-title fs-5" id="exampleModalLabel3">Łażienka</h1>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                              <div class="row">
+                                  <!--                                IMG OF WORK---------->
+                                  <div class="col-3 zoomable-image" data-target="zoomable-image-on-scean-30">
+                                      <img th:src="@{img/3/30.jpg}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image-on-scean" id="zoomable-image-on-scean-30">
+                                      <img th:src="@{img/3/30.jpg}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image" data-target="zoomable-image-on-scean-31">
+                                      <img th:src="@{img/3/31.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image-on-scean" id="zoomable-image-on-scean-31">
+                                      <img th:src="@{img/3/31.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image" data-target="zoomable-image-on-scean-32">
+                                      <img th:src="@{img/3/32.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image-on-scean" id="zoomable-image-on-scean-32">
+                                      <img th:src="@{img/3/32.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image" data-target="zoomable-image-on-scean-33">
+                                      <img th:src="@{img/3/33.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image-on-scean" id="zoomable-image-on-scean-33">
+                                      <img th:src="@{img/3/33.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <!--                                DESCRIPTION -------->
+                                  <div class="row">
+                                      <div class="col-12 modal-body-text">
+                                          <p>
+                                              Przygotowanie ściany pod mikrobeton (szlifowanie i gruntowanie ścian).<br>
+
+                                              Wykucie bruzd pod listwy LED, montaż listew LED.<br>
+
+                                              Przygotowanie schodów (oczyszczenie z resztek betonu, gruntowanie stopni).<br>
+
+                                              Układanie płytek na stopniach.<br>
+
+                                              Fugowanie schodów, aplikacja silikonu.<br>
+
+                                              Montaż listew przypodłogowych.<br>
+
+                                              Nakładanie farby gruntującej na ścianę.<br>
+
+                                              Aplikacja mikrobetonu.
+                                          </p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="modal-footer">
+                              <button type="button" class="button btn btn-secondary" data-bs-dismiss="modal">Zamknąć</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="container d-block col-lg-4 col-md-12">
+              <div class="Work__Exampl">
+                  <div class="card">
+                      <img th:src="@{/img/4/43.JPG}" class="card-img-top" alt="...">
+                      <div class="card-body">
+                          <h5 class="card-title">Łażienka</h5>
+                          <p class="card-text">Zrealozowalivaliśmy projek w ktorym zrobiliśmy ...</p>
+                          <button type="button" class="Work__Exampl_btn button  btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                              Wiecej informacji
+                          </button>
+                      </div>
+                  </div>
+              </div>
+              <!-------------- Modal ------------->
+              <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-xl">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <h1 class="modal-title fs-5" id="exampleModalLabel4">Łażienka</h1>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                              <div class="row">
+                                  <!--                                IMG OF WORK---------->
+                                  <div class="col-3 zoomable-image" data-target="zoomable-image-on-scean-40">
+                                      <img th:src="@{img/4/40.jpg}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image-on-scean" id="zoomable-image-on-scean-40">
+                                      <img th:src="@{img/4/40.jpg}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image" data-target="zoomable-image-on-scean-41">
+                                      <img th:src="@{img/4/41.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image-on-scean" id="zoomable-image-on-scean-41">
+                                      <img th:src="@{img/4/41.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image" data-target="zoomable-image-on-scean-42">
+                                      <img th:src="@{img/4/42.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image-on-scean" id="zoomable-image-on-scean-42">
+                                      <img th:src="@{img/4/42.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image" data-target="zoomable-image-on-scean-43">
+                                      <img th:src="@{img/4/43.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image-on-scean" id="zoomable-image-on-scean-43">
+                                      <img th:src="@{img/4/43.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <!--                                DESCRIPTION -------->
+                                  <div class="row">
+                                      <div class="col-12 modal-body-text">
+                                          <p>
+                                              Przygotowanie ściany pod mikrobeton (szlifowanie i gruntowanie ścian).<br>
+
+                                              Wykucie bruzd pod listwy LED, montaż listew LED.<br>
+
+                                              Przygotowanie schodów (oczyszczenie z resztek betonu, gruntowanie stopni).<br>
+
+                                              Układanie płytek na stopniach.<br>
+
+                                              Fugowanie schodów, aplikacja silikonu.<br>
+
+                                              Montaż listew przypodłogowych.<br>
+
+                                              Nakładanie farby gruntującej na ścianę.<br>
+
+                                              Aplikacja mikrobetonu.
+                                          </p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="modal-footer">
+                              <button type="button" class="button btn btn-secondary" data-bs-dismiss="modal">Zamknąć</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="container d-block col-lg-4 col-md-12">
+              <div class="Work__Exampl">
+                  <div class="card">
+                      <img th:src="@{/img/5/52.JPG}" class="card-img-top" alt="...">
+                      <div class="card-body">
+                          <h5 class="card-title">Łażienka</h5>
+                          <p class="card-text">Zrealozowalivaliśmy projek w ktorym zrobiliśmy ...</p>
+                          <button type="button" class="Work__Exampl_btn button  btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                              Wiecej informacji
+                          </button>
+                      </div>
+                  </div>
+              </div>
+              <!-------------- Modal ------------->
+              <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-xl">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <h1 class="modal-title fs-5" id="exampleModalLabel5">Łażienka</h1>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                              <div class="row">
+                                  <!--                                IMG OF WORK---------->
+                                  <div class="col-3 zoomable-image" data-target="zoomable-image-on-scean-50">
+                                      <img th:src="@{img/5/50.jpg}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image-on-scean" id="zoomable-image-on-scean-50">
+                                      <img th:src="@{img/5/50.jpg}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image" data-target="zoomable-image-on-scean-51">
+                                      <img th:src="@{img/5/51.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image-on-scean" id="zoomable-image-on-scean-51">
+                                      <img th:src="@{img/5/51.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image" data-target="zoomable-image-on-scean-52">
+                                      <img th:src="@{img/5/52.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image-on-scean" id="zoomable-image-on-scean-52">
+                                      <img th:src="@{img/5/52.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <!--                                DESCRIPTION -------->
+                                  <div class="row">
+                                      <div class="col-12 modal-body-text">
+                                          <p>
+                                              Przygotowanie ściany pod mikrobeton (szlifowanie i gruntowanie ścian).<br>
+
+                                              Wykucie bruzd pod listwy LED, montaż listew LED.<br>
+
+                                              Przygotowanie schodów (oczyszczenie z resztek betonu, gruntowanie stopni).<br>
+
+                                              Układanie płytek na stopniach.<br>
+
+                                              Fugowanie schodów, aplikacja silikonu.<br>
+
+                                              Montaż listew przypodłogowych.<br>
+
+                                              Nakładanie farby gruntującej na ścianę.<br>
+
+                                              Aplikacja mikrobetonu.
+                                          </p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="modal-footer">
+                              <button type="button" class="button btn btn-secondary" data-bs-dismiss="modal">Zamknąć</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="container d-block col-lg-4 col-md-12">
+              <div class="Work__Exampl">
+                  <div class="card">
+                      <img th:src="@{/img/6/63.JPG}" class="card-img-top" alt="...">
+                      <div class="card-body">
+                          <h5 class="card-title">Łażienka</h5>
+                          <p class="card-text">Zrealozowalivaliśmy projek w ktorym zrobiliśmy ...</p>
+                          <button type="button" class="Work__Exampl_btn button  btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                              Wiecej informacji
+                          </button>
+                      </div>
+                  </div>
+              </div>
+              <!-------------- Modal ------------->
+              <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-xl">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <h1 class="modal-title fs-5" id="exampleModalLabel6">Łażienka</h1>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                              <div class="row">
+                                  <!--                                IMG OF WORK---------->
+                                  <div class="col-3 zoomable-image" data-target="zoomable-image-on-scean-60">
+                                      <img th:src="@{img/6/60.jpg}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image-on-scean" id="zoomable-image-on-scean-60">
+                                      <img th:src="@{img/6/60.jpg}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image" data-target="zoomable-image-on-scean-61">
+                                      <img th:src="@{img/6/61.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image-on-scean" id="zoomable-image-on-scean-61">
+                                      <img th:src="@{img/6/61.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image" data-target="zoomable-image-on-scean-62">
+                                      <img th:src="@{img/6/62.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image-on-scean" id="zoomable-image-on-scean-62">
+                                      <img th:src="@{img/6/62.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image" data-target="zoomable-image-on-scean-63">
+                                      <img th:src="@{img/6/63.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image-on-scean" id="zoomable-image-on-scean-63">
+                                      <img th:src="@{img/6/63.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image" data-target="zoomable-image-on-scean-64">
+                                      <img th:src="@{img/6/64.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image-on-scean" id="zoomable-image-on-scean-64">
+                                      <img th:src="@{img/6/64.JPG}" class="img-fluid" alt="...">
+                                  </div>
+
+                                  <div class="col-3 zoomable-image" data-target="zoomable-image-on-scean-65">
+                                      <img th:src="@{img/6/65.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image-on-scean" id="zoomable-image-on-scean-65">
+                                      <img th:src="@{img/6/65.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image" data-target="zoomable-image-on-scean-66">
+                                      <img th:src="@{img/6/66.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image-on-scean" id="zoomable-image-on-scean-66">
+                                      <img th:src="@{img/6/66.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image" data-target="zoomable-image-on-scean-67">
+                                      <img th:src="@{img/6/67.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image-on-scean" id="zoomable-image-on-scean-67">
+                                      <img th:src="@{img/6/67.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <!--                                DESCRIPTION -------->
+                                  <div class="row">
+                                      <div class="col-12 modal-body-text">
+                                          <p>
+                                              Przygotowanie ściany pod mikrobeton (szlifowanie i gruntowanie ścian).<br>
+
+                                              Wykucie bruzd pod listwy LED, montaż listew LED.<br>
+
+                                              Przygotowanie schodów (oczyszczenie z resztek betonu, gruntowanie stopni).<br>
+
+                                              Układanie płytek na stopniach.<br>
+
+                                              Fugowanie schodów, aplikacja silikonu.<br>
+
+                                              Montaż listew przypodłogowych.<br>
+
+                                              Nakładanie farby gruntującej na ścianę.<br>
+
+                                              Aplikacja mikrobetonu.
+                                          </p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="modal-footer">
+                              <button type="button" class="button btn btn-secondary" data-bs-dismiss="modal">Zamknąć</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="container d-block col-lg-4 col-md-12">
+              <div class="Work__Exampl">
+                  <div class="card">
+                      <img th:src="@{/img/7/72.JPG}" class="card-img-top" alt="...">
+                      <div class="card-body">
+                          <h5 class="card-title">Łażienka</h5>
+                          <p class="card-text">Zrealozowalivaliśmy projek w ktorym zrobiliśmy ...</p>
+                          <button type="button" class="Work__Exampl_btn button  btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                              Wiecej informacji
+                          </button>
+                      </div>
+                  </div>
+              </div>
+              <!-------------- Modal ------------->
+              <div class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-xl">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <h1 class="modal-title fs-5" id="exampleModalLabel7">Łażienka</h1>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                              <div class="row">
+                                  <!--                                IMG OF WORK---------->
+                                  <div class="col-3 zoomable-image" data-target="zoomable-image-on-scean-70">
+                                      <img th:src="@{img/7/70.jpg}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image-on-scean" id="zoomable-image-on-scean-70">
+                                      <img th:src="@{img/7/70.jpg}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image" data-target="zoomable-image-on-scean-71">
+                                      <img th:src="@{img/7/71.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image-on-scean" id="zoomable-image-on-scean-71">
+                                      <img th:src="@{img/7/71.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image" data-target="zoomable-image-on-scean-72">
+                                      <img th:src="@{img/7/72.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="col-3 zoomable-image-on-scean" id="zoomable-image-on-scean-72">
+                                      <img th:src="@{img/7/72.JPG}" class="img-fluid" alt="...">
+                                  </div>
+                                  <!--                                DESCRIPTION -------->
+                                  <div class="row">
+                                      <div class="col-12 modal-body-text">
+                                          <p>
+                                              Przygotowanie ściany pod mikrobeton (szlifowanie i gruntowanie ścian).<br>
+
+                                              Wykucie bruzd pod listwy LED, montaż listew LED.<br>
+
+                                              Przygotowanie schodów (oczyszczenie z resztek betonu, gruntowanie stopni).<br>
+
+                                              Układanie płytek na stopniach.<br>
+
+                                              Fugowanie schodów, aplikacja silikonu.<br>
+
+                                              Montaż listew przypodłogowych.<br>
+
+                                              Nakładanie farby gruntującej na ścianę.<br>
+
+                                              Aplikacja mikrobetonu.
+                                          </p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="modal-footer">
+                              <button type="button" class="button btn btn-secondary" data-bs-dismiss="modal">Zamknąć</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
       </div>
-    </div>
-    <!-------------- Modal ------------->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-xl">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Łażienka</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <div class="row">
-              <!--                                IMG OF WORK---------->
-              <div class="col-3 zoomable-image" data-target="zoomable-image-on-scean-1">
-                <img th:src="@{img/lazienka.jpg}" class="img-fluid" alt="...">
-              </div>
-              <div class="col-3 zoomable-image-on-scean" id="zoomable-image-on-scean-1">
-                <img th:src="@{img/lazienka.jpg}" class="img-fluid" alt="...">
-              </div>
-
-              <div class="col-3 zoomable-image" data-target="zoomable-image-on-scean-2">
-                <img th:src="@{img/DSC02473.JPG}" class="img-fluid" alt="...">
-              </div>
-              <div class="col-3 zoomable-image-on-scean" id="zoomable-image-on-scean-2">
-                <img th:src="@{img/DSC02473.JPG}" class="img-fluid" alt="...">
-              </div>
-
-              <div class="col-3 zoomable-image" data-target="zoomable-image-on-scean-3">
-                <img th:src="@{img/DSC02474.JPG}" class="img-fluid" alt="...">
-              </div>
-              <div class="col-3 zoomable-image-on-scean" id="zoomable-image-on-scean-3">
-                <img th:src="@{img/DSC02474.JPG}" class="img-fluid" alt="...">
-              </div>
-              <!--                                DESCRIPTION -------->
-              <div class="row">
-                <div class="col-12 modal-body-text">
-                  <p>
-                    Przygotowanie ściany pod mikrobeton (szlifowanie i gruntowanie ścian).<br>
-
-                    Wykucie bruzd pod listwy LED, montaż listew LED.<br>
-
-                    Przygotowanie schodów (oczyszczenie z resztek betonu, gruntowanie stopni).<br>
-
-                    Układanie płytek na stopniach.<br>
-
-                    Fugowanie schodów, aplikacja silikonu.<br>
-
-                    Montaż listew przypodłogowych.<br>
-
-                    Nakładanie farby gruntującej na ścianę.<br>
-
-                    Aplikacja mikrobetonu.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="button btn btn-secondary" data-bs-dismiss="modal">Zamknąć</button>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 </body>

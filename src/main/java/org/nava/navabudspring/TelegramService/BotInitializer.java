@@ -1,11 +1,11 @@
 package org.nava.navabudspring.TelegramService;
 
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.stereotype.Component;
+import org.springframework.context.annotation.Configuration;
 import org.telegram.telegrambots.meta.TelegramBotsApi;
 import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 
-@Component
+@Configuration
 public class BotInitializer implements CommandLineRunner {
 
     private final NavaBot navaBot;
@@ -18,6 +18,6 @@ public class BotInitializer implements CommandLineRunner {
     public void run(String... args) throws Exception {
         TelegramBotsApi botsApi = new TelegramBotsApi(DefaultBotSession.class);
         botsApi.registerBot(navaBot);
-        System.out.println("Бот зарегистрирован!");
     }
+
 }

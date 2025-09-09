@@ -7,7 +7,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.awt.*;
 
 @Controller
 public class ViewController {
@@ -28,9 +29,11 @@ public class ViewController {
         System.out.println("Sent clientDate: " + clientDate);
         return "redirect:/";
     }
-    @GetMapping("/working-example")
-    public String workingExample() {
+
+    @GetMapping("/work-example")
+    public String showWorkExamples() {
         return "WorkingExamplTempleyt";
     }
+
 
 }
